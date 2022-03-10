@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/addbox.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <!-- header wrapper -->
+    <div class="headerWrapper">
+        <!-- navigation bar -->
+        <div class="navigation">
+            <ul>
+                <li id="listboxes"><a href="listboxes.html">List Boxes</a></li>
+                <li id="addbox" class="selected"><a href="addbox.html">Add Box</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="horizontalcenter">
+        <input id="inputName" class="inputField" type="text" name="name" onclick="resetBorderColour(this)" placeholder="Name" autofocus>
+        <br>
+        <input id="inputWeight" class="inputField" type="text" name="weight" onclick="resetBorderColour(this)" placeholder="Weight">
+        <br>
+
+        <label for="inputColour">Box Colour</label>
+        <br>
+        <input type="color" id="inputColour" value="#0000ff">
+        <br>
+        <input id="inputCountry" list="countries" name="chooseCountry" onclick="resetBorderColour(this)" placeholder="Destination country" onkeydown="IgnoreAlpha(event);">
+        <datalist id="countries">
+            <option value="Sweden">
+            <option value="China">
+            <option value="Brazil">
+            <option value="Australia">
+        </datalist>
+        <br>
+        <button type="submit" id="submit" onclick="submit()">Submit</button>
+    </div>
+</div>
+</body>
+</html>
