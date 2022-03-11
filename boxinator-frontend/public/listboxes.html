@@ -5,11 +5,11 @@
     <title>Boxes</title>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/general.css">
-    <script src="js/test.js"></script>
+    <script src="js/backendConnection.js"></script>
 </head>
 
 
-<body>
+<body onload="getAll()">
 <div class="container">
     <!-- header wrapper -->
     <div class="headerWrapper">
@@ -26,16 +26,16 @@
 <table>
     <thead>
     <tr>
+        <th>ID</th>
         <th>Receiver</th>
         <th>Weight</th>
         <th>Box Color</th>
+        <th>Destination country</th>
         <th>Shipping cost</th>
     </tr>
     </thead>
     <tbody id="boxes">
     </tbody>
 </table>
-
-<button onclick="at()"></button>
 </body>
 </html>

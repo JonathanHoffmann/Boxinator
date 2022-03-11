@@ -12,7 +12,7 @@ public class AddBox {
         dbConnector db = new dbConnector();
 
         String colour = "white";
-        String destination = "test";
+        String destination = "Sweden";
         String receiver = "Test";
         float weight = 404;
         String sql = db.buildInsertIntoString(colour, destination,receiver,weight);
