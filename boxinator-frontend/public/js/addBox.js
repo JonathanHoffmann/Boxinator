@@ -1,16 +1,10 @@
-/*var countries = ['Sweden','China','Brazil','Australia'];
-var list = document.getElementById('countries');
-
-countries.forEach(function (item){
-    var option = document.createElement('option');
-    option.value = item;
-    list.appendChild(option);
-
-})*/
 var errorBorderColour = "red";
 var defaultBorderColour = "white";
 var defaultColour = "#0000ff";
-
+var nameElement = document.getElementById("inputName");
+var weightElement = document.getElementById("inputWeight");
+var colourElement = document.getElementById("inputColour");
+var countryElement = document.getElementById("inputCountry");
 
 function resetBorderColour(element){
     element.style.borderColor = defaultBorderColour;
@@ -32,35 +26,10 @@ function IgnoreAlpha(e) {
 function submit()
 {
     //init variables
-    var nameElement = document.getElementById("inputName");
     var name = nameElement.value;
-    var weightElement = document.getElementById("inputWeight");
     var weight = weightElement.value;
-    var colourElement = document.getElementById("inputColour");
     var colour = colourElement.value;
-    var countryElement = document.getElementById("inputCountry");
     var country = countryElement.value;
-    var optionString = document.getElementById("countries").innerHTML;
-
-    //HTML option List is sent as a string containing HTML. This code splits it into the countries as Strings in an array.
-    //This is pretty useless since I blocked keypresses
-    var options = optionString.split('"');
-    var deleteflag = true;
-    var optionDebugString="";
-    for(var i = 0;i<options.length;i++)
-    {
-        if(deleteflag)
-        {
-            optionDebugString+=("Deleting " + options[i] + "\n");
-            options.splice(i, 1);
-            i--;
-        }
-        else
-            optionDebugString+=("Keeping " + options[i] + "\n");
-
-        deleteflag = !deleteflag;
-    }
-    console.log(optionDebugString);
 
     //Error handling
     var errors="";
@@ -73,20 +42,16 @@ function submit()
         errors += "You need to provide a weight.\n";
         weightElement.style.borderColor = errorBorderColour;
     }
+    else if(isNaN(weight)) {
+        errors += "Weight has to be a number.\n";
+        weightElement.style.borderColor = errorBorderColour;
+        weightElement.value="";
+    }
+
+
     if(country=="") {
         errors += "You need to provide a destination country.\n";
         countryElement.style.borderColor = errorBorderColour;
-    }
-    else {
-        var countryJibberishErrorFlag = true;
-        for (var i = 0; i < options.length; i++) {
-            if(country==options[i])
-                countryJibberishErrorFlag=false;
-        }
-        if(countryJibberishErrorFlag) {
-            errors += "The destination country must be one from the dropdown list.\n"
-            countryElement.style.borderColor = errorBorderColour;
-        }
     }
 
     //Error output
@@ -107,7 +72,7 @@ function submit()
         }
     }
 
-//TODO connect to Backend here
-
+    postBackend(name,weight,colour,country);
+    window.location.replace("listboxes.html");
 
 }
