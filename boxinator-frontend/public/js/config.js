@@ -1,1 +1,1 @@
-config = { backendUrl: 'https://localhost' };
+config = { backendUrl: 'http://localhost:8082/boxinator_backend_war_exploded/api' };
