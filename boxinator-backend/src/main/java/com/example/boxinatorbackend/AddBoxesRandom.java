@@ -1,9 +1,10 @@
 package com.example.boxinatorbackend;
 
 import com.github.javafaker.Faker;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import javax.ws.rs.*;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import java.util.Random;
 
 @Path("/addboxesrandom")

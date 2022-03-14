@@ -1,10 +1,7 @@
 var errorBorderColour = "red";
 var defaultBorderColour = "white";
 var defaultColour = "#0000ff";
-var nameElement = document.getElementById("inputName");
-var weightElement = document.getElementById("inputWeight");
-var colourElement = document.getElementById("inputColour");
-var countryElement = document.getElementById("inputCountry");
+
 
 function resetBorderColour(element){
     element.style.borderColor = defaultBorderColour;
@@ -26,6 +23,10 @@ function IgnoreAlpha(e) {
 function submit()
 {
     //init variables
+    var nameElement = document.getElementById("inputName");
+    var weightElement = document.getElementById("inputWeight");
+    var colourElement = document.getElementById("inputColour");
+    var countryElement = document.getElementById("inputCountry");
     var name = nameElement.value;
     var weight = weightElement.value;
     var colour = colourElement.value;

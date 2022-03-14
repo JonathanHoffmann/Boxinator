@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2022 at 12:28 PM
+-- Generation Time: Mar 14, 2022 at 03:27 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -34,29 +34,6 @@ CREATE TABLE `boxes` (
   `colour` text NOT NULL,
   `destinationcountry` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `select *`
--- (See below for the actual view)
---
-CREATE TABLE `select *` (
-`boxID` int(11)
-,`receiver` text
-,`weightKG` float
-,`colour` text
-,`destinationcountry` text
-);
-
--- --------------------------------------------------------
-
---
--- Structure for view `select *`
---
-DROP TABLE IF EXISTS `select *`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `select *`  AS SELECT `boxes`.`boxID` AS `boxID`, `boxes`.`receiver` AS `receiver`, `boxes`.`weightKG` AS `weightKG`, `boxes`.`colour` AS `colour`, `boxes`.`destinationcountry` AS `destinationcountry` FROM `boxes` ;
 
 --
 -- Indexes for dumped tables
