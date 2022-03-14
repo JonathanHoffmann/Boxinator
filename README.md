@@ -3,19 +3,19 @@ Boxinator Programming Test
 by Jonathan Hoffmann
 
 ## Tech Stack:
-IntelliJ Ultimate 2020.2.3
-Node.js 14.15.5
-NPM version 6.14.11
-Java 17.0.1
-Tomcat 9.0.56
-XAMPP 3.2.4
+IntelliJ Ultimate 2020.2.3  
+Node.js 14.15.5  
+NPM version 6.14.11  
+Java 17.0.1  
+Tomcat 9.0.56  
+XAMPP 3.2.4  
 Google Chrome 99.0.4844.51
 
 ## Ports that are used by the application:
-MySQL 3306
-Apache Webserver (Only for database initialization) 80,443
-Backend 8082
-Frontend 8080
+MySQL 3306  
+Apache Webserver (Only for database initialization) 80,443  
+Backend 8082  
+Frontend 8080  
 
 ## URLs for the application
 http://localhost:8082/boxinator_backend_war_exploded/api/listboxes  
