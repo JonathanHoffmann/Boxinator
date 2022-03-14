@@ -1,6 +1,6 @@
 # Boxinator
-## Boxinator Programming Test
-## by Jonathan Hoffmann
+Boxinator Programming Test
+by Jonathan Hoffmann
 
 ## Tech Stack:
 IntelliJ Ultimate 2020.2.3
@@ -18,33 +18,33 @@ Backend 8082
 Frontend 8080
 
 ## URLs for the application
-http://localhost:8082/boxinator_backend_war_exploded/api/listboxes__
-http://localhost:8082/boxinator_backend_war_exploded/api/hello-world__
-http://localhost:8082/boxinator_backend_war_exploded/api/addboxesrandom__
-http://localhost:8080/listboxes.html__
+http://localhost:8082/boxinator_backend_war_exploded/api/listboxes  
+http://localhost:8082/boxinator_backend_war_exploded/api/hello-world  
+http://localhost:8082/boxinator_backend_war_exploded/api/addboxesrandom  
+http://localhost:8080/listboxes.html  
 http://localhost:8080/addbox.html
 
 ## To run the application:
 
 ### Step 1 - Database:
-Open the XAMPP control panel and start the services Apache and MySQL.__
-Click on MySQL Admin__
-Click New on the left side of the phpMyAdmin browser window and call the new Database "boxinator_database".__
+Open the XAMPP control panel and start the services Apache and MySQL.  
+Click on MySQL Admin  
+Click New on the left side of the phpMyAdmin browser window and call the new Database "boxinator_database".  
 Click import on the center top and choose the sql file in the folder boxinator-database.
 
 ### Step 2 - Backend:
-Open the folder boxinator-backend as an IntelliJ project.__
-Make sure you have Tomcat selected when running the project.__
+Open the folder boxinator-backend as an IntelliJ project.  
+Make sure you have Tomcat selected when running the project.  
 If necessary please reload the Maven dependencies to install them.
 
 ### Step 3 - Frontend:
-Open the folder boxinator-frontend as an IntelliJ Project.__
-run the command "npm install" to install the dependencies.__
+Open the folder boxinator-frontend as an IntelliJ Project.  
+run the command "npm install" to install the dependencies.  
 run "index.js". You can also use the command "npm start" for this.
 
 ### Step 4 - Fill the database: (optional)
-If you want to fill up the database with some random boxes to test, please visit:__
-http://localhost:8082/boxinator_backend_war_exploded/api/addboxesrandom__
+If you want to fill up the database with some random boxes to test, please visit:  
+http://localhost:8082/boxinator_backend_war_exploded/api/addboxesrandom  
 This adds 20 random boxes into the database.
 
 ## Branching strategy and design decisions
